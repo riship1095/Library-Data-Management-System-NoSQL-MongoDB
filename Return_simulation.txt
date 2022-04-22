@@ -1,0 +1,100 @@
+db.borrowers.updateOne({card_no:'ID000067'},
+	{$set: {'book_borrowed.0.returned': 1}})
+	
+db.book_copies.updateOne({ISBN10:'0195153448', branch_id:1},
+	{$set: {'borrowers_list.0.return_dt': new Date(2021,07,25)}})
+			
+db.book_copies.updateOne({ISBN10:'0195153448', branch_id:1},		
+	{$inc: {'no_of_copies': 1}})
+	
+
+db.borrowers.updateOne({card_no:'ID000017'},
+	{$set: {'book_borrowed.0.returned': 1}})
+	
+
+db.book_copies.updateOne({ISBN10:'2070423204', branch_id:1},
+	{$set: {'borrowers_list.0.return_dt': new Date(2021,07,27)}})
+			
+db.book_copies.updateOne({ISBN10:'2070423204', branch_id:1},		
+	{$inc: {'no_of_copies': 1}})
+	
+	
+db.borrowers.updateOne({card_no:'ID000033'},
+	{$set: {'book_borrowed.0.returned': 1}})
+	
+db.book_copies.updateOne({ISBN10:'0060177586', branch_id:4},
+	{$set: {'borrowers_list.0.return_dt': new Date(2021,05,15)}})
+			
+db.book_copies.updateOne({ISBN10:'0060177586', branch_id:4},		
+		{$inc: {'no_of_copies': 1}})
+		
+		
+db.borrowers.updateOne({card_no:'ID000009'},
+	{$set: {'book_borrowed.0.returned': 1}})
+
+db.book_copies.updateOne({ISBN10:'0439095026', branch_id:5},
+	{$set: {'borrowers_list.0.return_dt': new Date(2021,09,20)}})
+			
+db.book_copies.updateOne({ISBN10:'0439095026', branch_id:5},		
+		{$inc: {'no_of_copies': 1}})
+		
+		
+
+db.borrowers.updateOne({card_no:'ID000131'},
+	{$set: {'book_borrowed.0.returned': 1}})
+	
+db.book_copies.updateOne({ISBN10:'0394743741', branch_id:5},
+	{$set: {'borrowers_list.0.return_dt': new Date(2021,02,06)}})
+			
+db.book_copies.updateOne({ISBN10:'0394743741', branch_id:5},		
+		{$inc: {'no_of_copies': 1}})
+		
+
+db.borrowers.updateOne({card_no:'ID000147'},
+	{$set: {'book_borrowed.0.returned': 1}})
+
+db.book_copies.updateOne({ISBN10:'3499110695', branch_id:2},
+	{$set: {'borrowers_list.0.return_dt': new Date(2021,03,20)}})
+			
+db.book_copies.updateOne({ISBN10:'3499110695', branch_id:2},		
+		{$inc: {'no_of_copies': 1}})
+		
+
+db.borrowers.updateOne({card_no:'ID000081'},
+	{$set: {'book_borrowed.0.returned': 1}})
+	
+db.book_copies.updateOne({ISBN10:'0140252800', branch_id:3},
+	{$set: {'borrowers_list.0.return_dt': new Date(2021,04,29)}})
+			
+db.book_copies.updateOne({ISBN10:'0140252800', branch_id:3},		
+		{$inc: {'no_of_copies': 1}})
+		
+		
+db.borrowers.updateOne({card_no:'ID000218'},
+	{$set: {'book_borrowed.0.returned': 1}})
+	
+db.book_copies.updateOne({ISBN10:'1567407781', branch_id:3},
+	{$set: {'borrowers_list.0.return_dt': new Date(2021,07,26)}})
+			
+db.book_copies.updateOne({ISBN10:'1567407781', branch_id:3},		
+		{$inc: {'no_of_copies': 1}})
+		
+		
+db.borrowers.updateOne({card_no:'ID000038'},
+	{$set: {'book_borrowed.0.returned': 1}})
+
+db.book_copies.updateOne({ISBN10:'3596258758', branch_id:2},
+	{$set: {'borrowers_list.0.return_dt': new Date(2021,11,30)}})
+			
+db.book_copies.updateOne({ISBN10:'3596258758', branch_id:2},		
+		{$inc: {'no_of_copies': 1}})
+		
+		
+db.borrowers.updateOne({card_no:'ID000109'},
+	{$set: {'book_borrowed.0.returned': 1}})
+	
+db.book_copies.updateOne({ISBN10:'0684823802', branch_id:2},
+	{$set: {'borrowers_list.0.return_dt': new Date(2021,02,30)}})
+			
+db.book_copies.updateOne({ISBN10:'0684823802', branch_id:2},		
+		{$inc: {'no_of_copies': 1}})

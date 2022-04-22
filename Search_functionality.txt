@@ -1,0 +1,31 @@
+db.books.aggregate([{
+    $lookup: {
+        from: 'book_copies',
+        localField: 'ISBN10',
+        foreignField: 'ISBN10',
+        as: 'book_copies'
+    }
+}, {$project: {
+        Title: 1,
+        Authors_arr: 1,
+        _id: 0,
+        ISBN10: 1,
+        Available: {
+            $cond: {
+                'if': {
+                    $gt: ['book_copies.no_of_copies', 1]},
+                then: 1,
+                'else': 0 }}}
+}, {$match: {
+        Title: {
+            $regex: '.',
+            $options: 'i'
+        },
+        Authors_arr: {
+            $regex: 'Ann',
+            $options: 'i'
+        },
+        ISBN10: {
+            $regex: '',
+            $options: 'i'}}
+}])
